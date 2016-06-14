@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mstf.test.text.Marquee">
+
+    <!-- 默认次数为3 -->
+    <Button
+        android:id="@+id/marquee_default"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:text="@string/marquee_default"
+        android:focusableInTouchMode="true">
+    </Button>
+
+    <Button
+        android:id="@+id/marquee_once"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        android:text="@string/marquee_once"
+        android:marqueeRepeatLimit="1"
+        android:layout_below="@id/marquee_default"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        android:text="@string/marquee_forever"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:layout_below="@id/marquee_once"/>
+
+</RelativeLayout>
